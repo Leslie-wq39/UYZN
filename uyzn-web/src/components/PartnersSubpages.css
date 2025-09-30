@@ -1,0 +1,68 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .ps {
+    --primary: #0f2742;
+    --accent: #d4af37;
+    --bg: #f7f9fc;
+    --muted: #475467;
+    --surface: #fff;
+    --border: #e5e7eb;
+  }
+
+  .ps-wrap {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  .ps-h1 {
+    @apply text-3xl md:text-5xl font-extrabold  inline-block bg-gold/90 px-2 rounded;
+  }
+  .ps-h2 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .ps-sub {
+    @apply mt-3 max-w-3xl text-[color:var(--muted)];
+  }
+
+  .ps-hero {
+    @apply py-14 md:py-20 text-white;
+    background-image:
+      linear-gradient(
+        65deg,
+        rgba(15, 39, 66, 0.92) 0%,
+        rgba(15, 39, 66, 0.78) 30%,
+        rgba(212, 175, 55, 0.18) 80%
+      ),
+      radial-gradient(
+        900px 300px at 10% 10%,
+        rgba(212, 175, 55, 0.25),
+        transparent 60%
+      ),
+      linear-gradient(#0f2742, #0f2742);
+  }
+  .ps-ctas {
+    @apply mt-6 flex gap-3 flex-wrap;
+  }
+
+  .ps-section {
+    @apply py-12 bg-white;
+  }
+  .ps-section:nth-of-type(even) {
+    @apply bg-[var(--bg)];
+  }
+
+  .ps-grid {
+    @apply mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .ps-card {
+    @apply rounded-xl border bg-[var(--surface)] p-5 shadow-sm;
+  }
+  .ps-card h3 {
+    @apply text-lg font-semibold;
+  }
+  .ps-card p {
+    @apply text-sm text-[color:var(--muted)] mt-1;
+  }
+
+  .ps-list {
+    @apply mt-4 list-disc pl-6 text-[color:var(--muted)] space-y-1;
+  }
+}

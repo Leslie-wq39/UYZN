@@ -1,0 +1,89 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .signin {
+    --section-bg: #f7f9fc;
+  }
+  .si-wrap {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .si-hero {
+    @apply text-white bg-cover bg-center;
+    background-image:
+      linear-gradient(
+        65deg,
+        rgba(15, 39, 66, 0.92) 0%,
+        rgba(15, 39, 66, 0.78) 30%,
+        rgba(212, 175, 55, 0.18) 80%
+      ),
+      linear-gradient(#0f2742, #0f2742);
+  }
+  .si-h1 {
+    @apply text-3xl md:text-5xl font-extrabold inline-block bg-gold/90 px-2 rounded text-brand-900;
+  }
+  .si-sub {
+    @apply mt-2 text-white/90;
+  }
+
+  .si-section {
+    @apply py-10 bg-white;
+  }
+  .si-grid {
+    @apply grid gap-8 lg:grid-cols-[1.1fr_.9fr];
+  }
+
+  .si-card {
+    @apply bg-white border rounded-xl p-5 shadow-sm grid gap-4;
+  }
+  .si-field {
+    @apply grid gap-1;
+  }
+
+  /* Base style for all inputs in the form */
+  .si-field input {
+    @apply h-11 w-full rounded-lg border border-black/20 bg-white px-3;
+  }
+  .si-field input:focus {
+    @apply outline-none ring-2 ring-brand-600/25 border-brand-600;
+  }
+
+  /* Already present – keep it; this one adds extra right padding for the Show button */
+  .si-pass input {
+    @apply h-11 w-full rounded-lg border border-black/20 bg-white px-3 pr-20;
+  }
+
+  .si-label {
+    @apply text-sm font-medium;
+  }
+
+  .si-pass {
+    @apply relative;
+  }
+  .si-pass input {
+    @apply h-11 w-full rounded-lg border px-3 pr-20;
+  }
+  .si-toggle {
+    @apply absolute right-2 top-1.5 px-3 h-8 rounded-md text-sm bg-brand-50 text-brand-900 hover:bg-brand-100;
+  }
+
+  .si-row {
+    @apply flex justify-end;
+  }
+  .si-link {
+    @apply text-brand-700 text-sm;
+  }
+
+  .si-error {
+    @apply rounded-md bg-red-50 text-red-700 border border-red-200 px-3 py-2 text-sm;
+  }
+  .si-legal {
+    @apply text-xs text-text-muted mt-1;
+  }
+
+  .si-aside {
+    @apply grid gap-4;
+  }
+  .si-box {
+    @apply bg-[var(--section-bg)] border rounded-xl p-4;
+  }
+}

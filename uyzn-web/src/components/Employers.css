@@ -1,0 +1,207 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .partners-page {
+    --primary: #0f2742;
+    --accent: #d4af37;
+    --teal: #1ba39c;
+    --text: #101828;
+    --muted: #475467;
+    --bg: #f7f9fc;
+    --surface: #fff;
+    --border: #e5e7eb;
+    --shadow: 0 8px 28px rgba(16, 24, 40, 0.08);
+  }
+
+  .p-wrap {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  .p-h2 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .p-card {
+    @apply rounded-xl border bg-white p-5 shadow-sm;
+  }
+
+  /* HERO */
+  .p-hero {
+    @apply text-white bg-cover bg-center;
+    background-image:
+      linear-gradient(
+        65deg,
+        rgba(15, 39, 66, 0.92) 0%,
+        rgba(15, 39, 66, 0.78) 30%,
+        rgba(212, 175, 55, 0.18) 80%
+      ),
+      radial-gradient(
+        900px 300px at 10% 10%,
+        rgba(212, 175, 55, 0.3),
+        transparent 60%
+      ),
+      linear-gradient(#0f2742, #0f2742);
+  }
+  .p-hero__inner {
+    @apply py-16 md:py-24 p-wrap;
+  }
+  .p-hero__title {
+    @apply text-3xl md:text-5xl font-extrabold  inline-block bg-gold/90 px-2 rounded;
+  }
+  .p-hero__sub {
+    @apply mt-3 max-w-3xl text-white/90;
+  }
+  .p-hero__ctas {
+    @apply mt-6 flex gap-3 flex-wrap;
+  }
+
+  /* WHY */
+  .p-why {
+    @apply py-12 bg-[var(--bg)];
+  }
+  .p-why__grid {
+    @apply mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  .p-icon {
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white border mb-2;
+    color: var(--primary);
+  }
+  .p-card h3 {
+    @apply font-semibold text-lg;
+  }
+  .p-card p {
+    @apply text-sm text-[color:var(--muted)];
+  }
+
+  /* SERVICES */
+  .p-services {
+    @apply py-12 bg-white;
+  }
+  .p-services__grid {
+    @apply mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .p-service__head {
+    @apply flex items-center gap-2;
+  }
+  .p-link {
+    @apply inline-block mt-2 text-brand-700 hover:underline;
+  }
+
+  /* IMPACT */
+  .p-impact {
+    @apply py-12 bg-[var(--bg)];
+  }
+  .p-impact__wrap {
+    @apply grid gap-6 lg:grid-cols-2 items-center;
+  }
+  .p-impact__copy p {
+    @apply mt-2 text-[color:var(--muted)];
+  }
+  .p-stats {
+    @apply grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4;
+  }
+  .p-stats dt {
+    @apply text-xs uppercase tracking-wide text-[color:var(--muted)];
+  }
+  .p-stats dd {
+    @apply text-2xl font-extrabold text-[color:var(--primary)];
+  }
+  .p-impact__ctas {
+    @apply mt-5 flex gap-3 flex-wrap;
+  }
+  .p-impact__visual {
+    @apply w-full;
+  }
+  .p-map {
+    @apply rounded-2xl border bg-white relative;
+    height: 280px;
+    box-shadow: var(--shadow);
+    background:
+      radial-gradient(
+        240px 160px at 20% 25%,
+        rgba(27, 163, 156, 0.12),
+        transparent 60%
+      ),
+      radial-gradient(
+        260px 180px at 80% 75%,
+        rgba(212, 175, 55, 0.12),
+        transparent 70%
+      ),
+      linear-gradient(#fff, #fff);
+  }
+  .p-map__badge {
+    @apply absolute bottom-4 left-4 text-sm font-semibold bg-[var(--primary)] text-white rounded-full px-3 py-1;
+  }
+
+  /* FLOW */
+  .p-flow {
+    @apply py-12 bg-white;
+  }
+  .p-flow__list {
+    @apply mt-6 grid gap-3;
+  }
+  .p-badge {
+    @apply inline-flex items-center justify-center w-7 h-7 rounded-full bg-[var(--accent)] text-white font-bold mr-2;
+  }
+
+  /* LOGOS (optional strip) */
+  .p-logos {
+    @apply py-10 bg-white;
+  }
+  .p-logos__title {
+    @apply text-base font-semibold;
+  }
+  .p-logos__grid {
+    @apply mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4;
+  }
+  .p-logos__card {
+    @apply rounded-xl border bg-white p-4 flex items-center justify-center opacity-80 hover:opacity-100 hover:shadow;
+  }
+  .p-logos__card img {
+    @apply max-h-10 w-auto;
+  }
+
+  /* INQUIRY */
+  .p-inquiry {
+    @apply py-12 bg-[var(--bg)];
+  }
+  .p-inquiry__panel {
+    @apply p-card;
+  }
+  .p-inquiry__panel {
+    @apply grid gap-5 md:grid-cols-2 items-start;
+  }
+  .p-inquiry__copy h3 {
+    @apply text-xl font-bold;
+  }
+  .p-inquiry__copy p {
+    @apply text-[color:var(--muted)] mt-1;
+  }
+  .p-inquiry__form {
+    @apply grid gap-3;
+  }
+  .p-field {
+    @apply grid gap-1;
+  }
+  .p-field span {
+    @apply text-sm font-medium;
+  }
+  .p-field input,
+  .p-field select {
+    @apply h-10 rounded-lg border px-3;
+  }
+  .p-inquiry__note {
+    @apply text-sm mt-2;
+  }
+  .p-inquiry__note.is-ok {
+    @apply text-green-700;
+  }
+  .p-inquiry__note.is-err {
+    @apply text-red-700;
+  }
+
+  /* FOOTNOTE */
+  .p-footnote {
+    @apply py-10 bg-white;
+  }
+  .p-footnote p {
+    @apply text-sm text-[color:var(--muted)];
+  }
+}

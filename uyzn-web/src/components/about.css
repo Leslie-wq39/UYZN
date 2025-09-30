@@ -1,0 +1,100 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .a-wrap {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .a-hero {
+    @apply text-white bg-cover bg-center relative;
+    background-image:
+      linear-gradient(
+        65deg,
+        rgba(15, 39, 66, 0.92) 0%,
+        rgba(15, 39, 66, 0.78) 30%,
+        rgba(212, 175, 55, 0.18) 80%
+      ),
+      radial-gradient(
+        900px 300px at 10% 10%,
+        rgba(212, 175, 55, 0.3),
+        transparent 60%
+      ),
+      linear-gradient(#0f2742, #0f2742);
+  }
+
+  .a-page-hero {
+    @apply bg-[var(--section-bg)];
+  }
+  .a-h1 {
+    @apply text-3xl md:text-5xl font-extrabold inline-block bg-gold/90 px-2 rounded;
+  }
+  .a-h1--pill {
+    @apply inline-block bg-gold/90 px-2 rounded text-brand-900;
+  }
+  .a-sub {
+    @apply mt-3 max-w-3xl text-white;
+  }
+  .a-ctas {
+    @apply mt-6 flex gap-3 flex-wrap;
+  }
+
+  .a-section {
+    @apply py-10 bg-white;
+  }
+  .a-section--tint {
+    @apply bg-[var(--section-bg)];
+  }
+
+  .a-grid {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  .a-card {
+    @apply block rounded-xl border bg-white p-5 hover:shadow-card transition;
+    color: inherit;
+    text-decoration: none;
+  }
+  .a-card h3 {
+    @apply text-lg font-semibold;
+  }
+  .a-card p {
+    @apply text-sm text-text-muted mt-1;
+  }
+  .a-card-cta {
+    @apply inline-block mt-3 text-brand-700;
+  }
+
+  .a-two {
+    @apply grid gap-8 lg:grid-cols-[1.2fr_.8fr];
+  }
+  .a-prose p {
+    @apply mt-3;
+  }
+  .a-h2 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .a-h3 {
+    @apply text-lg font-semibold mt-6;
+  }
+  .a-h4 {
+    @apply text-base font-semibold;
+  }
+  .a-list {
+    @apply list-disc pl-5 space-y-1 text-text-primary mt-2;
+  }
+  .a-aside {
+    @apply bg-white border rounded-xl p-4 h-fit;
+  }
+  .a-kpis li {
+    @apply text-sm text-text-muted;
+  }
+
+  .a-bullets {
+    @apply list-disc pl-5 space-y-1 mt-2 text-text-muted;
+  }
+
+  .a-closing {
+    @apply bg-brand-900 text-white py-10;
+  }
+  .a-closing__inner {
+    @apply flex gap-3 flex-wrap items-center;
+  }
+}

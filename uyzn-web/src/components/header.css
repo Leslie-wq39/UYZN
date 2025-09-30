@@ -1,0 +1,183 @@
+/* @config "../../tailwind.config.js" */
+
+@layer components {
+  /* Shell */
+  .uyzn-header {
+    @apply sticky top-0 z-40 bg-brand-900 text-white transition-shadow;
+  }
+  .uyzn-header--scrolled {
+    @apply shadow-md;
+  }
+
+  /* wider container + no wrapping */
+  .uyzn-bar {
+    @apply w-full max-w-7xl mx-auto px-4 flex items-center justify-between gap-3;
+    height: 4rem;
+  }
+  .uyzn-bar--compact {
+    height: 3.5rem;
+  }
+
+  /* Brand (logo + wordmark) */
+  .uyzn-logo-link {
+    @apply flex items-center gap-2 font-bold text-white shrink-0;
+  }
+  .uyzn-logo-word {
+    @apply leading-none;
+  }
+  .uyzn-logo-dot {
+    @apply inline-block h-3 w-3 rounded-full;
+    background: #d4af37;
+  } /* fallback if image fails */
+
+  /* Image treatment so the round logo looks crisp on dark bar */
+  .uyzn-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 9999px; /* keeps round logos round */
+    background: transparent; /* keep logo’s own background */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08); /* subtle ring on dark bg */
+  }
+  .uyzn-bar--compact .uyzn-logo-img {
+    transform: scale(0.92);
+    transform-origin: left center;
+  }
+
+  /* Primary nav (desktop) */
+  .uyzn-primary {
+    @apply hidden lg:flex items-center gap-1 flex-1 justify-center min-w-0;
+  }
+  .uyzn-nav-link {
+    @apply px-3 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 whitespace-nowrap;
+  }
+  .uyzn-chevron {
+    @apply ml-1 inline;
+  }
+
+  /* Utilities (desktop) */
+  .uyzn-utility {
+    @apply hidden lg:flex items-center gap-2 shrink-0 whitespace-nowrap;
+  }
+
+  /* Search */
+  .uyzn-search-form {
+    @apply relative;
+  }
+  .uyzn-search-input {
+    @apply h-9 w-56 md:w-64 rounded-lg bg-white/10 text-white placeholder-white/70
+           pl-8 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/60;
+  }
+  .uyzn-search-icon {
+    @apply absolute left-2 top-2.5 text-white/80;
+  }
+
+  /* CTA */
+  .uyzn-cta {
+    @apply inline-flex items-center justify-center h-9 px-3 rounded-lg bg-gold text-black
+                     font-semibold hover:opacity-90 whitespace-nowrap;
+  }
+
+  /* Mobile hamburger */
+  .uyzn-burger {
+    @apply lg:hidden p-2 rounded-lg text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60;
+  }
+
+  /* Desktop mega menus */
+  .uyzn-menu-wrap {
+    @apply relative hidden lg:block;
+  }
+  .uyzn-menu-panel {
+    @apply absolute inset-x-0 bg-white text-text-primary shadow-card border-b z-40;
+  }
+  .uyzn-menu-grid {
+    @apply max-w-7xl mx-auto px-4 py-6;
+  }
+  .uyzn-menu-cols {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+  .uyzn-menu-grid-simple {
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .uyzn-menu-card {
+    @apply block rounded-xl border hover:border-brand-300 bg-white p-4;
+  }
+  .uyzn-menu-card-title {
+    @apply text-base font-semibold;
+  }
+  .uyzn-menu-card-desc {
+    @apply muted text-sm mt-1;
+  }
+  .uyzn-menu-card-cta {
+    @apply text-brand-700 text-sm mt-3;
+  }
+
+  .uyzn-filters {
+    @apply mt-4 md:mt-0;
+  }
+  .uyzn-filters-title {
+    @apply text-sm font-semibold mb-3;
+  }
+  .uyzn-chips {
+    @apply flex flex-wrap gap-2;
+  }
+  .uyzn-chip {
+    @apply chip;
+  }
+
+  /* Mobile drawer */
+  .uyzn-mobile {
+    @apply lg:hidden fixed inset-0 z-50;
+  }
+  .uyzn-mobile-overlay {
+    @apply absolute inset-0 bg-black/40;
+  }
+  /* ⬇️ Change these lines */
+  .uyzn-mobile-drawer {
+    /* full width by default */
+    @apply fixed right-0 top-0 h-full w-full bg-white text-text-primary shadow-xl p-4 overflow-y-auto;
+  }
+
+  /* from sm and up, use the narrower panel look */
+  @screen sm {
+    .uyzn-mobile-drawer {
+      @apply w-[88%] max-w-sm;
+    }
+  }
+
+  .uyzn-mobile-top {
+    @apply flex items-center justify-between;
+  }
+  .uyzn-mobile-brand {
+    @apply flex items-center gap-2 font-bold text-brand-700;
+  }
+  .uyzn-mobile-close {
+    @apply p-2 rounded-lg hover:bg-brand-50;
+  }
+
+  .uyzn-mobile-grid {
+    @apply grid grid-cols-2 gap-2 mt-4;
+  }
+
+  .uyzn-mobile-section {
+    @apply mt-6;
+  }
+  .uyzn-section-title {
+    @apply text-sm font-semibold mb-2;
+  }
+  .uyzn-section-list {
+    @apply grid gap-1;
+  }
+  .uyzn-section-item {
+    @apply px-3 py-2 rounded-lg hover:bg-brand-50 text-left;
+  }
+  .uyzn-section-item.is-active {
+    @apply bg-brand-50 font-medium;
+  }
+
+  .uyzn-mobile-auth {
+    @apply mt-6 border-t pt-4 flex gap-2;
+  }
+}

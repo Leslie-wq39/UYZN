@@ -1,0 +1,85 @@
+/* src/index.css */
+
+/* 1) All imports must be first (PostCSS rule) */
+@import './components/header.css';
+@import './components/Homepage.css';
+@import './components/Opportunities.css';
+@import './components/Employers.css';
+@import './components/PartnersSubpages.css';
+@import './components/Learn.css';
+@import './components/about.css';
+@import './components/SignIn.css';
+@import './components/Register.css';
+@import './components/Account.css';
+@import './components/footer.css';
+
+/* 2) Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3) Base defaults aligned to the UYZN brand */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-bg text-text-primary antialiased font-sans;
+    margin: 0;
+  }
+
+  a {
+    @apply text-brand-600 hover:text-brand-700;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-text-primary;
+  }
+
+  /* Muted copy helper */
+  .muted {
+    @apply text-text-muted;
+  }
+}
+
+/* 4) Reusable components */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium transition;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:opacity-100;
+  }
+  .btn-secondary {
+    @apply btn bg-gold text-black hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-brand-700 hover:bg-brand-50;
+  }
+
+  .card {
+    @apply rounded-xl border bg-surface shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium bg-brand-50 text-brand-700;
+  }
+  .layout-grid {
+    @apply grid gap-6 md:grid-cols-[minmax(0,1fr)_360px];
+  }
+}
+
+/* 5) Extra utilities */
+@layer utilities {
+  .bg-uyzn-hero {
+    @apply bg-gradient-to-tr from-brand-900 to-gold;
+  }
+}

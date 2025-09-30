@@ -1,0 +1,120 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .learn {
+    --bg: #f7f9fc;
+    --surface: #fff;
+    --border: #e5e7eb;
+    --muted: #475467;
+  }
+
+  .l-wrap {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  .l-hero {
+    @apply text-white bg-cover bg-center relative;
+    background-image:
+      linear-gradient(
+        65deg,
+        rgba(15, 39, 66, 0.92) 0%,
+        rgba(15, 39, 66, 0.78) 30%,
+        rgba(212, 175, 55, 0.18) 80%
+      ),
+      radial-gradient(
+        900px 300px at 10% 10%,
+        rgba(212, 175, 55, 0.3),
+        transparent 60%
+      ),
+      linear-gradient(#0f2742, #0f2742);
+  }
+  .l-page-hero {
+    @apply py-10 bg-[var(--bg)];
+  }
+  .l-h1 {
+    @apply text-3xl md:text-5xl font-extrabold inline-block bg-gold/90 px-2 rounded;
+  }
+  .l-h2 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  .l-h3 {
+    @apply text-lg font-semibold;
+  }
+  .l-sub {
+    @apply mt-3 max-w-3xl text-white/90;
+  }
+  .l-ctas {
+    @apply mt-6 flex gap-3 flex-wrap;
+  }
+
+  .l-section {
+    @apply py-10 bg-white;
+  }
+  .l-grid {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .l-card {
+    @apply rounded-xl border bg-[var(--surface)] p-5 hover:shadow-card transition;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .l-card h3 {
+    @apply text-lg font-semibold;
+  }
+  .l-card p {
+    @apply text-sm text-[var(--muted)] mt-1;
+  }
+  .l-card-cta {
+    @apply inline-block mt-3 text-brand-700;
+  }
+
+  .l-two {
+    @apply grid gap-8 lg:grid-cols-[1.2fr_.8fr];
+  }
+  .l-form {
+    @apply grid gap-3 bg-[var(--surface)] border rounded-xl p-4;
+  }
+  .l-field {
+    @apply grid gap-1;
+  }
+  .l-field--full {
+    @apply md:col-span-2;
+  }
+  .l-field input,
+  .l-field select {
+    @apply h-10 rounded-lg border px-3;
+  }
+  .l-note {
+    @apply block mt-2 text-xs text-[var(--muted)];
+  }
+  .l-result {
+    @apply mt-3 p-3 rounded-lg bg-brand-50 text-brand-900 border;
+  }
+  .l-links {
+    @apply mt-4 flex gap-3 items-center flex-wrap;
+  }
+  .l-aside {
+    @apply bg-[var(--surface)] border rounded-xl p-4;
+  }
+
+  .l-search input {
+    @apply mt-4 h-11 w-full max-w-xl rounded-xl border px-4;
+  }
+
+  .l-faq {
+    @apply grid gap-3;
+  }
+  .l-faq-item {
+    @apply bg-[var(--surface)] border rounded-xl p-4;
+  }
+  .l-faq-item summary {
+    @apply cursor-pointer font-semibold flex items-center gap-2;
+  }
+  .l-faq-cat {
+    @apply text-xs px-2 py-1 rounded bg-brand-50 text-brand-900;
+  }
+  .l-faq-a {
+    @apply mt-2 text-sm text-[var(--muted)];
+  }
+}

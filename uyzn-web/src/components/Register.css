@@ -1,0 +1,95 @@
+/* @config "../../tailwind.config.js" */
+@layer components {
+  .signup {
+    @apply bg-[var(--section-bg,#f7f9fc)] py-10;
+  }
+  .signup__wrap {
+    @apply max-w-3xl mx-auto px-4;
+  }
+  .signup__hero {
+    @apply mb-4;
+  }
+  .signup__h1 {
+    @apply text-3xl md:text-4xl font-extrabold;
+  }
+  .signup__sub {
+    @apply text-text-muted mt-1;
+  }
+
+  .signup__card {
+    @apply bg-white border rounded-2xl p-5 shadow-sm;
+  }
+  .signup__roles {
+    @apply inline-flex rounded-xl bg-brand-50 p-1 mb-4;
+  }
+  .role {
+    @apply px-3 py-1.5 rounded-lg text-sm text-brand-700;
+  }
+  .role.is-active {
+    @apply bg-white shadow;
+  }
+
+  .si-success {
+    @apply rounded-md bg-green-50 text-green-700 border border-green-200 px-3 py-2 text-sm;
+  }
+
+  .layout-grid {
+    @apply grid md:grid-cols-2 gap-3;
+  }
+  .field {
+    @apply grid gap-1;
+  }
+  .field.col-2 {
+    @apply md:col-span-2;
+  }
+  .field input {
+    @apply h-11 rounded-xl border px-3;
+  }
+
+  .pwd {
+    @apply relative;
+  }
+  .pwd .show {
+    @apply absolute right-2 top-2 text-sm text-brand-700;
+  }
+  .hint {
+    @apply text-xs text-text-muted;
+  }
+  .meter {
+    @apply mt-1 text-xs font-semibold inline-block px-2 py-0.5 rounded;
+  }
+  .meter--weak {
+    @apply bg-red-50 text-red-700;
+  }
+  .meter--medium {
+    @apply bg-yellow-50 text-yellow-700;
+  }
+  .meter--strong {
+    @apply bg-green-50 text-green-700;
+  }
+
+  .or {
+    @apply md:col-span-2 text-center text-xs text-text-muted -my-2;
+  }
+
+  .check {
+    @apply flex items-start gap-2 mt-3 text-sm;
+  }
+  .check input {
+    @apply mt-1;
+  }
+
+  .actions {
+    @apply mt-4 flex gap-2 items-center;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-10 px-4 rounded-lg bg-gold text-black font-semibold hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center h-10 px-4 rounded-lg border;
+  }
+
+  .error {
+    @apply mt-3 text-red-700 bg-red-50 border border-red-200 rounded-lg p-2;
+  }
+}
