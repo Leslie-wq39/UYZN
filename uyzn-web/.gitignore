@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+uyzn-web/.env
+uyzn-api/.env
+.env
+*.env
+
